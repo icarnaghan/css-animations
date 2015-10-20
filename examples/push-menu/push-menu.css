@@ -1,0 +1,69 @@
+.menu {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+nav, .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 260px;
+	height: 100%;
+	background: #000;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	border-bottom: solid 1px #fff;
+}
+
+nav li a:link,
+nav li a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav li:hover a,
+nav li:focus a {
+	background: #fff;
+	color: #000;
+}
+
+nav a {
+	padding: 1em;
+	display: block;
+}
+
+.body {
+	position: relative;
+	z-index: 1;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+}
+
+.overlay {
+	visibility: hidden;
+	opacity: 0;
+	width: 100%;
+	display: block;
+	z-index: 3;
+}
+
+.body.active {
+	left: 260px;
+}
+
+.body.active + .overlay {
+	visibility: visible;
+	opacity: 0.5;
+
+	left: 260px;
+}

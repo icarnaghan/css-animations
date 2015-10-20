@@ -1,14 +1,90 @@
 <!doctype html>
 <html>
 <head>
-  <title>Bring Your HTML Back from the Dead with CSS Animations</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<title>Bring Your HTML Back from the Dead with CSS Animations</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.flexslider .slides li {
+			text-align: center;
+		}
+
+		.flexslider .slides img.example {
+			width: auto;
+		    max-width: 640px;
+		    display: inline-block;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider.min.js"></script>
 </head>
 <body>
-<script src="scripts.js"></script>
+	<div class="flexslider">
+		<ul class="slides">
+			<li>
+				<h1>CSS3 Compound Transforms</h1>
+				<img src="img/compound.png" class="example" alt="Compound Transforms" />
+			</li>
+			<li>
+				<img src="img/origin.png" class="example" alt="Origin" />
+				<h2>Origin</h2>
+				<h4>translate(x,y), translateX(x), translateY(y), translateZ(z), <strong>translate3d(x,y,z)</strong></h4>
+				<p>Allows you to change the position on transformed elements.</p>
+			</li>
+			<li>
+				<img src="img/translate.png" class="example" alt="Translate" />
+				<h2>Translate</h2>
+				<h4>translate(x,y), translateX(x), translateY(y), translateZ(z), <strong>translate3d(x,y,z)</strong></h4>
+				<p>Defines a translation, moving the element along the X, Y and/or Z axis.</p>
+			</li>
+			<li>
+				<img src="img/scale.png" class="example" alt="Scale" />				
+				<h2>Scale</h2>
+				<h4>scale(x,y), scaleX(x), scaleY(y), <strong>scaleZ(z)</strong>, <strong>scale3d(x,y,z)</strong></h4>
+				<p>Defines a scale transformation along the X, Y and/or Z axis.</p>
+			</li>
+			<li>
+				<img src="img/skew.png" class="example" alt="Skew" />	
+				<h2>Skew</h2>
+				<h4>skew(x,y), skewX(x), skewY(y)</h4>
+				<p>Defines a skew transformation along the X and/or Y axis.</p>
+			</li>
+			<li>
+				<img src="img/rotate.png" class="example" alt="Rotate" />
+				<h2>Rotate</h2>
+				<h4>rotate(angle), <strong>rotateX(angle)</strong>, <strong>rotateY(angle)</strong>, <strong>rotateZ(angle)</strong>, <strong>rotate3d(x,y,z,angle)</strong></h4>
+				<p>Defines a 2D rotation, the angle is specified in the parameter</p>
+			</li>
+			<li>
+				<img src="img/perspective.png" class="example" alt="Perspective" />
+				<h2>Perspective</h2>
+				<h4>perspective(n)</h4>
+				<p>Defines a perspective view for a 3D transformed element</p>
+			</li>
+			<li>
+				<img src="img/matrix.png" class="example" alt="Matrix" />
+				<h2>Matrix</h2>
+				<h4>matrix(n,n,n,n,n,n), <strong>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</strong></h4>
+				<p>Defines a 2D/3D transformation, using a matrix of six values for 2D and 16 values for 3D</p>
+			</li>
+			<li>
+				<img src="img/easing.png" class="example" alt="Transitions" />
+				<h2>Transitions</h2>
+				<h4>[property] [duration] [delay]</h4>
+				<p>Transitions allows you to change property values smoothly (from one value to another), over a given duration.</p>
+			</li>
+		</ul>
+	</div>
+	<script>
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				slideshow: false,
+				directionNav: false
+			});
+		});
+	</script>
 </body>
 </html>

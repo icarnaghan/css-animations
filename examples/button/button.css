@@ -1,0 +1,59 @@
+body {
+	text-align: center;
+	padding: 3em;
+}
+
+.btn {
+	position: relative;
+	background: rgb(146,39,143);
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	height: 64px;
+	width: 64px;
+	border: solid 0 rgb(146,39,143);
+	box-shadow: 0 0 0 0 rgba(146,39,143,0.5);
+}
+
+.btn:before, .btn:after {
+	font-family: 'FontAwesome';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	display: block;
+	color: #fff;
+	font-size: 45px;
+	background: transparent;
+
+	margin-left: -22.5px;
+	margin-top: -22.5px;
+	width: 45px;
+	height: 45px;
+}
+
+.btn:before {
+	content: '\f067';
+}
+
+.btn:after {
+	content: '\f068';
+}
+
+.btn:hover,
+.btn:focus
+{
+	background: rgb(198,113,196);
+}
+
+.btn:active {
+	box-shadow: 0 0 0 10px rgba(146,39,143,0.5);
+	background: rgb(146,39,143);
+}
+
+.btn:hover:before,
+.btn:focus:before {
+}
+
+.btn:hover:after,
+.btn:focus:after {
+}
