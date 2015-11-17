@@ -47,6 +47,9 @@ nav a {
 	width: 100%;
 	height: 100%;
 	padding: 1em;
+
+	transform: translate3d(0,0,0);
+	transition: transform 350ms ease;
 }
 
 .overlay {
@@ -58,6 +61,10 @@ nav a {
 }
 
 .body.active {
+	transform: translate3d(260px,0,0);
+}
+
+.no-csstransforms .body.active {
 	left: 260px;
 }
 
@@ -65,5 +72,10 @@ nav a {
 	visibility: visible;
 	opacity: 0.5;
 
+	transition: all 350ms ease;
+	transform: translate3d(260px,0,0);
+}
+
+.no-csstransforms .body.active + .overlay {
 	left: 260px;
 }
